@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+@custom-variant focus (&:before);
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+/* } */
+
+#mainTitle {
+  font-family: "Instrument Sans" !important;
+}
+.hidden-ul {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: more;
+  transition: 1s;
+}
+
+#vintage {
+  font-family: "Instrument Sans" !important;
+}
+
+@keyframes more {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes BackgroundImage {
+  0%,
+  75% {
+    background-image: url("../img/watch2.jpg");
+    background-size: cover;
+  }
+  25% {
+    background-image: url("../img/watch3.jpg");
+    background-size: cover;
+  }
+  50% {
+    background-image: url("../img/watch4.jpg");
+    background-size: cover;
+  }
+  75% {
+    background-image: url("../img/watch5.jpg");
+    background-size: cover;
+  }
+}
+
+#image-container {
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: BackgroundImage;
+  background-size: cover;
+  animation-timing-function: linear;
+}
+#gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.747),
+    /* Light transparent white at the top (20% opacity) */ rgb(0, 0, 0)
+      /* Dark transparent black at the bottom (80% opacity) */
+  );
+}
+
+.container {
+  background-image: radial-gradient(circle at center, #260f01d0, rgb(0, 0, 0));
+}
+

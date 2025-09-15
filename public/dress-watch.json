@@ -1,0 +1,23 @@
+[
+  {
+    "style": "Casual/Fashion wristwatch",
+    "color": "Black dial, black leather strap, silver/white hands and numerals",
+    "descriptin": "Geneva Quartz analog watch with Arabic numerals, faux chronograph sub-dials, and a padded black leather strap with white stitching. Round polished case with decorative pushers.",
+    "market_price": "$10 - $30 (affordable fashion watch range)",
+    "display": "Analog"
+  },
+  {
+    "style": "Formal/Fashion wristwatch",
+    "color": "Black dial, black metal strap, white Roman numerals and markers",
+    "descriptin": "EconomicXI Quartz analog watch with Roman numeral hour markers, multiple decorative sub-dials, and a polished black stainless steel link bracelet.",
+    "market_price": "$15 - $40 (affordable fashion watch range)",
+    "display": "Analog"
+  },
+  {
+    "style": "Formal/Fashion wristwatch",
+    "color": "Black dial, black mesh strap, white Roman numerals and markers",
+    "descriptin": "Geneva Quartz analog watch with Roman numeral hour markers, multiple decorative sub-dials, and a sleek black stainless steel mesh band.",
+    "market_price": "$10 - $30 (affordable fashion watch range)",
+    "display": "Analog"
+  }
+]
