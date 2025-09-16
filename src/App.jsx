@@ -13,12 +13,14 @@ import Luxury from "./pages/Luxury";
 import SmartWatch from "./pages/SmartWatch";
 
 import Sitemap from "./pages/Sitemap";
+import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PravacyPolicy";
 // Main App Component
 function App() {
   return (
     <>
       <BrowserRouter>
-          <Header />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -27,11 +29,13 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="/dress-watches" element={<DressWatch />} />
           <Route path="/vintage" element={<Vintage />} />
-          <Route path="/luxury" element={<Luxury />}/>
+          <Route path="/luxury" element={<Luxury />} />
           <Route path="/smart-watch" element={<SmartWatch />} />
-          <Route path="site-map" element={<Sitemap/>} />
+          <Route path="/site-map" element={<Sitemap />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />{" "}
         </Routes>
-         <FooterComponent />
+        <FooterComponent />
       </BrowserRouter>
     </>
   );

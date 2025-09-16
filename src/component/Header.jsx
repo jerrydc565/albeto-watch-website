@@ -153,11 +153,11 @@ function Header() {
             </li>
           </Link>
 
-          <a href="/#ContactUs">
-            <li className="m-5 transition-all duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+<Link to={"/contact-us"}> <li className="m-5 transition-all duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
               Contact us
-            </li>
-          </a>
+            </li></Link>          
+           
+          
         </ul>
 
         <button className="bg-[#722D2D] p-[5px] rounded-[30px] pl-5 pr-5 text-white text-[12px]">

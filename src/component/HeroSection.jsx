@@ -2,19 +2,20 @@ import React from 'react'
 
 function HeroSection() {
   return (
-    <main className="w-full flex justify-between h-[100vh] max-h-[700px] mt-2  rounded-[60px] bg-[#EBEBEB] max-w-[1140px] mx-auto ">
-      <section className="w-[30%] ">
-        <div className="absolute w-[50%] bg-[#EBEBEB] rounded-[20px] top-50 left-50 p-[25px] shadow-[-15px_15px_20px_rgba(0,0,0,0.3)] ... pr-[30px] pl-[30px] ">
+    <main className="w-full max-w-[1140px] mx-auto mt-2 rounded-[30px] md:rounded-[60px] bg-[#EBEBEB] flex flex-col md:flex-row h-auto md:h-[80vh] max-h-[700px] overflow-hidden shadow-lg">
+      {/* Text Section */}
+      <section className="relative w-full md:w-[45%] flex items-center justify-center py-8 md:py-0">
+        <div className="w-[95%] sm:w-[80%] md:w-[90%]   p-5 sm:p-8 md:p-10 ">
           <h1
-            className="font-bold text-[50px] leading-none mb-5"
-            style={{ "fontFamily": "Instrument Sans" }}
+            className="font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl leading-tight mb-5"
+            style={{ fontFamily: "Instrument Sans" }}
           >
             Timeless <span className="text-[#722D2D]">Elegance</span>,
             <span className="text-[#722D2D]"> Uncompromising</span> Precision
           </h1>
           <p
-            className="text-[#545454] text-[15px] mb-5 leading-none "
-            style={{ "fontFamily": "Inter" }}
+            className="text-[#545454] text-sm xs:text-base sm:text-lg mb-6 leading-snug"
+            style={{ fontFamily: "Inter" }}
           >
             Experience the finest selection of luxury timepieces with
             first-class service. From vintage classics to cutting-edge smart
@@ -22,18 +23,17 @@ function HeroSection() {
           </p>
           <a href="#collection">
             <button
-              className="bg-[#722D2D] p-[7px] rounded-[10px] pl-10 pr-10 text-white text-[14px] mr-5 cursor-[url(hand.cur),_pointer] ... hover:bg-[#5a2323] transition-all duration-300"
-              style={{ "fontFamily": "Inter" }}
+              className="bg-[#722D2D] py-2 px-6 sm:px-8 rounded-[10px] text-white text-sm sm:text-base font-medium hover:bg-[#5a2323] transition-all duration-300"
+              style={{ fontFamily: "Inter" }}
             >
-              {" "}
-              Explore Our Collection{" "}
+              Explore Our Collection
             </button>
           </a>
-        
         </div>
       </section>
+      {/* Image Section */}
       <section
-        className='bg-[url("/img/watch1.jpg")] w-[70%] h-lvh bg-cover bg-[#00000096] bg-blend-overlay  rounded-r-[60px] '
+        className='w-full md:w-[55%] h-[220px] xs:h-[270px] sm:h-[350px] md:h-auto bg-[url("/img/watch1.jpg")] bg-cover bg-center bg-[#00000096] bg-blend-overlay rounded-b-[30px] md:rounded-b-none md:rounded-r-[60px]'
         id="image-container"
       ></section>
     </main>

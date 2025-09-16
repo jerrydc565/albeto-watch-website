@@ -136,3 +136,5 @@ export const smartData = [
     display: "1.92-inch Retina OLED touchscreen",
   },
 ];
+
+

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import luxury1 from "../assets/rolex.jpg";
 import luxury2 from "../assets/omega.jpg";
 import luxury3 from "../assets/patek.jpg";
@@ -13,23 +12,25 @@ function Luxury() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
   return (
     <main>
-      <div className=" w-full max-w-[500px] mx-auto text-center">
+      {/* Header Section */}
+      <div className="w-full max-w-[600px] mx-auto text-center px-3 mt-6">
         <h2
-          className="text-[35px] font-bold text-[#722D2D] mb-[-5px]"
+          className="text-2xl sm:text-3xl md:text-[35px] font-bold text-[#722D2D] mb-1"
           style={{ fontFamily: "Instrument Sans" }}
         >
           Luxury Collection
         </h2>
         <p
-          className="text-[30px] mb-2 "
+          className="text-lg sm:text-xl md:text-[30px] mb-2"
           style={{ fontFamily: "Instrument Sans" }}
         >
           Where Excellence Meets Artistry
         </p>
         <p
-          className="text-[16px] text-[#545454] leading-none"
+          className="text-sm sm:text-base md:text-[16px] text-[#545454] leading-normal"
           style={{ fontFamily: "Instrument Sans" }}
         >
           Experience the pinnacle of horological artistry with our curated
@@ -38,15 +39,13 @@ function Luxury() {
         </p>
       </div>
 
-      <section className="grid w-full max-w-[1040px] relative mx-auto grid-cols-4 gap-4 p-5 mt-10">
+      {/* Responsive Luxury Grid */}
+      <section className="grid w-full max-w-[1040px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 sm:p-5 mt-10">
         {luxuryItem.map((item, index) => (
           <div
             key={item}
-            className="object-cover cursor-[url(hand.cur),_pointer] ... object-center rounded-2xl h-[300px] hover:bg-[#00000062] shadow-xl transition-transform duration-500 overflow-hidden "
-            onClick={() => {
-              setCurrent(index);
-              console.log("clicked", index);
-            }}
+            className="object-cover cursor-pointer object-center rounded-2xl h-[220px] xs:h-[250px] sm:h-[270px] md:h-[300px] hover:bg-[#00000062] shadow-xl transition-transform duration-500 overflow-hidden"
+            onClick={() => setCurrent(index)}
           >
             <img
               src={item}
@@ -56,43 +55,41 @@ function Luxury() {
           </div>
         ))}
       </section>
+
+      {/* Modal for Watch Details */}
       {current !== null && (
         <section
-          className="w-full h-full backdrop-blur-xs  absolute flex items-center justify-center top-10  bg-[#0000008a]"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#0000008a] px-2"
           onClick={() => setCurrent(null)}
         >
           <div
-            className="bg-white popout rounded-2xl w-[60%] p-5  mt-10"
+            className="bg-white popout rounded-2xl w-full max-w-2xl p-4 sm:p-8 mt-10 mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="watch-card flex items-center gap-10">
+            <div className="watch-card flex flex-col md:flex-row items-center gap-6 md:gap-10">
               <img
                 src={luxuryData[current]?.image}
                 alt=""
-                className="w-[300px] h-[300px] mx-auto object-cover rounded-2xl shadow-[0px_2px_4px_5px_#c7c7c7] object-center border-2 border-white"
+                className="w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[300px] md:h-[300px] mx-auto object-cover rounded-2xl shadow-[0px_2px_4px_5px_#c7c7c7] object-center border-2 border-white"
               />
-              <div>
-                {" "}
-                <p className=" font-bold text-4xl mb-5 text-[#722D2D]">
-                  {" "}
-                  {luxuryData[current]?.style}{" "}
+              <div className="flex-1 mt-4 md:mt-0">
+                <p className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4 text-[#722D2D]">
+                  {luxuryData[current]?.style}
                 </p>
-                <li className="mb-2 list-disc leading-5 text-[#646464]">
-                  {" "}
-                  {luxuryData[current]?.color}
-                </li>
-                <li className="mb-2 list-disc leading-5 text-[#646464]">
-                  {" "}
-                  {luxuryData[current]?.descriptin}{" "}
-                </li>
-                <li className="mb-2 list-disc leading-5 text-[#646464]">
-                  {" "}
-                  {luxuryData[current]?.display}{" "}
-                </li>
-                <li className="mb-2 list-disc leading-5 text-[#646464]">
-                  {" "}
-                  {luxuryData[current]?.market_price}{" "}
-                </li>
+                <ul className="list-disc pl-5">
+                  <li className="mb-2 leading-5 text-[#646464] text-sm sm:text-base">
+                    {luxuryData[current]?.color}
+                  </li>
+                  <li className="mb-2 leading-5 text-[#646464] text-sm sm:text-base">
+                    {luxuryData[current]?.descriptin}
+                  </li>
+                  <li className="mb-2 leading-5 text-[#646464] text-sm sm:text-base">
+                    {luxuryData[current]?.display}
+                  </li>
+                  <li className="mb-2 leading-5 text-[#646464] text-sm sm:text-base">
+                    {luxuryData[current]?.market_price}
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
