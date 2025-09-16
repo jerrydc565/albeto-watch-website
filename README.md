@@ -104,5 +104,7 @@ Watch  data are managed using JavaScript variables within modules (e.g., `watchD
 This codebase and its structure are based on the requirements and design guidelines provided in "Alberto Clocks.pdf".
 
 ---
+**Live url**
 
-**For more details, refer to the PDF and explore the codebase.**
+**Github url**
+https://github.com/jerrydc565/albeto-watch-website
