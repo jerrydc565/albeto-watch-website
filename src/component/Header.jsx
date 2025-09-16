@@ -4,9 +4,28 @@ import Down from "../assets/down.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Up from "../assets/upload.png";
+import navBar from "../assets/menu.png"
 function Header() {
   const [more, setMore] = useState("Hide");
   const [product, setProduct] = useState("Hide");
+  const [mobileNav, setMobileNav] = useState("Hide");
+
+  const handleClickNav = () => {
+    if (mobileNav === "Hide") {
+      setMobileNav("Show");
+    } else {
+      setMobileNav("Hide");
+    }
+  };
+
+  const closeMobileNav = () => {
+    if (mobileNav === "Show") {
+      setMobileNav("Hide");
+    }
+  };
+  
+
+
 
   const handleClick = () => {
     if (more === "Hide") {
@@ -53,7 +72,7 @@ function Header() {
   return (
     <div className="w-full sticky top-0 z-100" onClick={close}>
       <header
-        className="flex items-center justify-between bg-[#b3b3b3cf] rounded-[88px] w-full max-w-[1140px] h-fit mx-auto p-[10px] mt-2 mb-5 pl-20 pr-20  shadow-[-2px_2px_10px_3px_#bcbcbccf] backdrop-blur-[3px]"
+        className=" w-full px-5 flex items-center justify-between bg-[#b3b3b3cf] rounded-[88px] xl:max-w-[1140px] h-fit mx-auto p-[10px] mt-2 mb-5 md:pl-20 md:pr-20  shadow-[-2px_2px_10px_3px_#bcbcbccf] backdrop-blur-[3px]"
         style={{ fontFamily: "Inter" }}
         onClick={otherClose}
       >
@@ -153,14 +172,15 @@ function Header() {
             </li>
           </Link>
 
-<Link to={"/contact-us"}> <li className="m-5 transition-all duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+          <Link to={"/contact-us"}>
+            {" "}
+            <li className="m-5 transition-all duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
               Contact us
-            </li></Link>          
-           
-          
+            </li>
+          </Link>
         </ul>
 
-        <button className="bg-[#722D2D] p-[5px] rounded-[30px] pl-5 pr-5 text-white text-[12px]">
+        <button className=" hidden bg-[#722D2D] p-[5px] rounded-[30px] pl-5 pr-5 md:block text-white text-[12px]">
           Visitor 0
         </button>
         <ul
@@ -189,6 +209,71 @@ function Header() {
             </li>
           </Link>
         </ul>
+        <ul
+          className="absolute right-0  top-20 w-[30%] bg-white flex flex-col gap-5 p-7 shadow-2xl moreNav rounded-2xl  "
+          style={{
+            display: mobileNav === "Hide" ? "none" : "block",
+          }}
+          onClick={closeMobileNav}
+        >
+          {" "}
+          <Link to={"/"}>
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Home
+            </li>
+          </Link>
+          <a href="/#technology">
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Technology
+            </li>
+          </a>
+          <Link to={"/service"}>
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Service
+            </li>
+          </Link>
+          <Link to={"/about-us"}>
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              About us
+            </li>
+          </Link>
+          <Link to={"/gallery"}>
+            <li className=" transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Gallery
+            </li>
+          </Link>{" "}
+          <Link to={"/vintage"}>
+            {" "}
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Vintage{" "}
+            </li>
+          </Link>
+          <Link to={"/luxury"}>
+            {" "}
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              {" "}
+              Luxury{" "}
+            </li>
+          </Link>
+          <Link to={"smart-watch"}>
+            {" "}
+            <li className="transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Smart Watch
+            </li>
+          </Link>
+          <Link to={"/support"}>
+            <li className=" transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Support
+            </li>
+          </Link>
+          <Link to={"/contact-us"}>
+            {" "}
+            <li className=" transition-all mb-5 duration-300 border-b-2 border-transparent hover:text-[#722D2D] hover:border-b-2 hover:border-b-[#722D2D]">
+              Contact us
+            </li>
+          </Link>
+        </ul>
+        <img src={navBar} alt="" width={"25px"} onClick={handleClickNav} className="md:hidden" />
       </header>
     </div>
   );

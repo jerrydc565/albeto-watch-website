@@ -23,6 +23,13 @@
   animation-name: more;
   transition: 1s;
 }
+.moreNav{
+    animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: nav;
+  transition: 1s;
+}
 
 #vintage {
   font-family: "Instrument Sans" !important;
@@ -36,6 +43,15 @@
     transform: translateY(0px);
   }
 }
+@keyframes nav {
+  from {
+    transform: translatex(100px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
 
 @keyframes BackgroundImage {
   0%,
