@@ -1,5 +1,5 @@
 import React from "react";
-import checkRing from "../assets/check_ring@2x.png";
+import checkRing from "../assets/Checkring.png";
 function TechnologyComponent() {
   return (
     <main className="pt-10 sm:pt-16 bg-[#d4d4d4]" id="technology">
