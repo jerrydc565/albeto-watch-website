@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 function Gallery() {
-  // Always scroll to top when this component is rendered
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -23,13 +22,18 @@ function Gallery() {
 
       {/* Responsive Gallery Grid */}
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 sm:p-6 md:p-10 mt-10 sm:mt-16">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => (
-          <div
-            key={num}
-            className={`bg-[url(/img/gallery${num}.jpg)] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer`}
-            style={{ cursor: "pointer" }}
-          ></div>
-        ))}
+        <div className="bg-[url('/img/gallery1.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery2.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery3.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery4.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery5.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery6.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery7.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery8.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery9.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery10.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery11.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
+        <div className="bg-[url('/img/gallery12.jpg')] bg-cover bg-center rounded-2xl h-[180px] xs:h-[220px] sm:h-[250px] md:h-[300px] hover:scale-105 transition-transform duration-500 cursor-pointer"></div>
       </section>
     </main>
   );
